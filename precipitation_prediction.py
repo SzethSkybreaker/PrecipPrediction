@@ -19,7 +19,7 @@ import lightgbm as lgb
 # plot each of these locations with a color on the map
 
 #load our model
-loaded_gbm = lgb.Booster(model_file='lightgbm_model_v2.txt')
+loaded_gbm = lgb.Booster(model_file='lightgbm_model_v1.txt')
 sounding_ids = ["APX", "INL","MPX","DVN","ILX","ILN","DTX", "KSGF", "KGRB", "KTOP"]
 COLOR_MAP = {'rain': 'green', 'snow': 'blue', 'mixed': 'purple'}
 
@@ -149,4 +149,5 @@ time = nearest_sounding_time()
 #time = datetime(2025, 11, 18, 0)
 all_stats = get_observed_sounding_data(time, sounding_ids)  
 predictions = predict_precip(all_stats) 
+
 plot_predictions(predictions, time)
