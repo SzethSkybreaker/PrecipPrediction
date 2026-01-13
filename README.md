@@ -1,5 +1,5 @@
 NOTE: this was intended to have sample data, but the data files are much too big to include in the GitRepo.
-However, these scripts should work data retrieved from the listed sources, and standard wrf output files
+However, these scripts should work on data retrieved from the listed sources, and standard wrf output files
 
 On Versions
 - most of the scripts in this repo were written with Python 3.13.7, and the associated packages compatible with this version
@@ -28,3 +28,4 @@ precipitation_prediction.py: applies trained model to realtime soundings obs in 
 
 
 wrf_precip.py: takes standard NetCDF wrf output and makes a continuous plot of the upper midwest and precip type
+
