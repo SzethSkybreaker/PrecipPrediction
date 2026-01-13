@@ -60,7 +60,7 @@ data_dict = {
 df_for_model = pd.DataFrame(data_dict)
 
 #load the ml model and then make predictions with each
-loaded_gbm = lgb.Booster(model_file='lightgbm_model_v2.txt')
+loaded_gbm = lgb.Booster(model_file='lightgbm_model_v1.txt')
 probabilities = loaded_gbm.predict(df_for_model)
 
 #reshape to work on map of Midwest
@@ -99,3 +99,4 @@ plt.title("Rain-Snow LightGBM Midwest Prediction")
 plt.show() 
 
 #recall, this model is NOT optimized for confidence, just getting it right. So 64% does not mean it is only 64% confident that its going to be snow
+
